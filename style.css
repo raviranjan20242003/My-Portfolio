@@ -1,0 +1,156 @@
+ :root {
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --accent-color: #2563eb;
+            --nav-bg: #ffffff;
+            --card-bg: #ffffff;
+            --pill-bg: #e2e8f0;
+            --border-color: #e2e8f0;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #0f172a;
+            --text-color: #f1f5f9;
+            --nav-bg: #1e293b;
+            --card-bg: #1e293b;
+            --pill-bg: #334155;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 10%;
+            background: var(--nav-bg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links li { margin-left: 1.5rem; }
+
+        .nav-links li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Hero & Home Section Combined */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .profile-img-container {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
+            background: #cbd5e1; /* Placeholder color */
+        }
+
+        .bio h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .bio h2 { color: var(--accent-color); font-size: 1.2rem; margin-bottom: 1rem; }
+        .bio p { margin-bottom: 1.5rem; opacity: 0.9; }
+
+        .btn-group { display: flex; gap: 10px; }
+
+        /* Skills */
+        #skills { padding: 60px 0; text-align: center; }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .skill-pill {
+            background: var(--pill-bg);
+            padding: 6px 16px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-block;
+            transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, color 180ms ease;
+        }
+
+        .skill-pill:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 10px 20px rgba(2,6,23,0.12);
+            background: var(--accent-color);
+            color: white;
+            cursor: default;
+        }
+        /* Contact */
+        #contact { 
+            background: var(--nav-bg); 
+            padding: 60px 20px; 
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 60px;
+        }
+
+      
+
+        .btn {
+            padding: 10px 20px;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        footer { text-align: center; padding: 40px; opacity: 0.6; font-size: 0.8rem; }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .profile-grid { grid-template-columns: 1fr; text-align: center; }
+            .btn-group { justify-content: center; }
+        }
