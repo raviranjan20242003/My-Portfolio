@@ -1,74 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | B.Tech CSE Student</title>
+    <title>Ravi Ranjan — CSE Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Animated background -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
     <nav>
-        <div class="logo"><strong>Developer</strong> </div>
+        <div class="logo">RR<span class="logo-dot">.</span></div>
         <ul class="nav-links">
-            <li><a href="#Home">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><button id="theme-toggle" class="btn" style="padding: 5px 10px;">🌙 Theme</button></li>
+            <li>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </button>
+            </li>
         </ul>
     </nav>
 
-    <main class="container">
-        <section id="Home" class="profile-grid">
-            <div class="profile-img-container">
-                <img src="your-profile-pic1.jpg" alt="Profile Picture" class="profile-img">
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-inner">
+                <div class="profile-side">
+                    <div class="img-wrapper">
+                        <img src="your-profile-pic1.jpg" alt="Ravi Ranjan" class="profile-img">
+                        <div class="img-ring"></div>
+                        <div class="status-badge">
+                            <span class="status-dot"></span>
+                            Open to Internships
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bio">
+                    <p class="eyebrow"><svg class="wave-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" width="22" height="22"><path fill="#FCEA2B" d="M36 13c-3.9 0-7 3.1-7 7v16c0 3.9 3.1 7 7 7s7-3.1 7-7V20c0-3.9-3.1-7-7-7z"/><path fill="#FCEA2B" d="M22 20c-3.9 0-7 3.1-7 7v9c0 3.9 3.1 7 7 7s7-3.1 7-7v-9c0-3.9-3.1-7-7-7z"/><path fill="#FCEA2B" d="M50 20c-3.9 0-7 3.1-7 7v9c0 3.9 3.1 7 7 7s7-3.1 7-7v-9c0-3.9-3.1-7-7-7z"/><path fill="#FCEA2B" d="M36 43c-9.9 0-18 8.1-18 18h36c0-9.9-8.1-18-18-18z"/><path fill="#F1B31C" d="M22 36v9c0 1.2.3 2.4.7 3.4C16.5 51.1 13 56.6 13 63h9v-4c0-7.7 6.3-14 14-14s14 6.3 14 14v4h9c0-6.4-3.5-11.9-9.7-14.6.4-1 .7-2.2.7-3.4v-9"/></svg> Hello, World!</p>
+                    <h1>I'm <span class="name-split"><span class="name-first">Ravi</span><span class="name-last">Ranjan</span></span></h1>
+                    <h2>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:5px"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>B.Tech CSE &nbsp;·&nbsp;
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:5px"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>2nd Year
+                    </h2>
+                    <p class="bio-text">
+                        A passionate Computer Science student building modern, scalable web applications. 
+                        I love solving complex problems and turning ideas into clean, functional code.
+                    </p>
+                    <div class="btn-group">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Get in Touch</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#skills" class="btn btn-ghost">View Skills</a>
+                    </div>
+                </div>
             </div>
-            <div class="bio">
-                <h1>Hi, I'm <span class="highlight">Ravi Ranjan</span></h1>
-                <h2>B.Tech 2nd Year Student • Computer Science</h2>
-                <p>
-                    I am a passionate Computer Science student currently in my second year of B.Tech. 
-                    I focus on building modern, scalable web applications and mastering the full-stack 
-                    development lifecycle. I love solving complex problems and turning ideas into 
-                    clean, functional code.
-                </p>
-                <div class="btn-group">
-                    <a href="#contact" class="btn">Get in Touch</a>
-                    
+            <div class="scroll-hint">
+                <span>scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="section-divider">
+            <span>— Technical Stack</span>
+        </div>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="skills-header">
+                <h2>What I Work With</h2>
+                <p>Technologies I use to bring ideas to life</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" style="--delay:0s">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l16 0M4 8h16M4 12h12M4 16h10M4 20h8"/><rect x="14" y="12" width="6" height="8" rx="1" fill="currentColor" opacity="0.2" stroke="currentColor"/></svg>
+                    </div>
+                    <span>HTML</span>
+                    <span class="skill-tag">Markup</span>
+                </div>
+                <div class="skill-card" style="--delay:0.05s">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                    </div>
+                    <span>CSS</span>
+                    <span class="skill-tag">Styling</span>
+                </div>
+                <div class="skill-card" style="--delay:0.1s">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <span>JavaScript</span>
+                    <span class="skill-tag">Language</span>
+                </div>
+                <div class="skill-card" style="--delay:0.15s">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M9 9c0-1.66 1.34-3 3-3s3 1.34 3 3-1.34 3-3 3M12 12v3M12 18h.01"/></svg>
+                    </div>
+                    <span>React.js</span>
+                    <span class="skill-tag">Framework</span>
+                </div>
+                <div class="skill-card" style="--delay:0.2s">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72M10.44 15.47C9.07 13.2 7.03 10.3 5.09 8.5M21.7 15.35C18.4 14.62 16.1 14.23 13 14"/></svg>
+                    </div>
+                    <span>Node.js</span>
+                    <span class="skill-tag">Runtime</span>
+                </div>
+                <div class="skill-card" style="--delay:0.25s">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/></svg>
+                    </div>
+                    <span>SQL & Databases</span>
+                    <span class="skill-tag">Data</span>
+                </div>
+                <div class="skill-card" style="--delay:0.3s">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 012 2v7M11 18H8a2 2 0 01-2-2V9"/></svg>
+                    </div>
+                    <span>Git & GitHub</span>
+                    <span class="skill-tag">Version Control</span>
                 </div>
             </div>
         </section>
 
-        <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 40px 0;">
+        <!-- Divider -->
+        <div class="section-divider">
+            <span>— Contact</span>
+        </div>
 
-        <section id="skills">
-            <h2>Technical Stack</h2>
-            <div class="skills-container">
-                <div class="skill-pill">HTML</div>
-                <div class="skill-pill">CSS</div>
-                <div class="skill-pill">JavaScript </div>
-                <div class="skill-pill">React.js</div>
-                <div class="skill-pill">Node.js</div>
-                <div class="skill-pill">SQL & Databases</div>
-                <div class="skill-pill">Git & GitHub</div>
-                
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="contact-inner">
+                <div class="contact-text">
+                    <h2>Let's Build<br><span class="name-highlight">Something Great</span></h2>
+                    <p>I'm always looking for new opportunities to collaborate, learn, and create. Don't hesitate to reach out!</p>
+                </div>
+                <div class="contact-cards">
+                    <a href="mailto:raviranjanjj66@gmail.com" class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+                        </div>
+                        <div class="contact-card-info">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">raviranjanjj66@gmail.com</span>
+                        </div>
+                        <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="tel:+917061967062" class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .99h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <div class="contact-card-info">
+                            <span class="contact-label">Mobile</span>
+                            <span class="contact-value">+91 7061967062</span>
+                        </div>
+                        <svg class="contact-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
             </div>
-        </section>
-
-        <section id="contact">
-            <h2 style="text-align: center;color: chocolate;">Let's Connect</h2>
-            <div class="contact-details" style="max-width:500px; margin:20px auto; text-align:left;">
-                <p style="text-align: center;color: chocolate;"><strong>Email:</strong> raviranjanjj66@gmail.com</p>
-             <p style="text-align: center;color: chocolate;"><strong>Mob:</strong>7061967062</p>
-                
-            </div> 
         </section>
     </main>
 
     <footer>
-        &copy; 2025 Ravi Ranjan • CSE Undergraduate
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <div class="footer-inner">
+            <span>© 2025 Ravi Ranjan</span>
+            <span class="foot
