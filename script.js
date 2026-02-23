@@ -1,14 +1,5 @@
 // Theme toggle
-const toggleButton = document.getElementById('theme-toggle');
-const savedTheme = localStorage.getItem('theme') || 'dark';
-document.documentElement.setAttribute('data-theme', savedTheme);
 
-toggleButton.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme');
-   
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-});
 
 // Intersection Observer for scroll animations
 const observer = new IntersectionObserver((entries) => {
